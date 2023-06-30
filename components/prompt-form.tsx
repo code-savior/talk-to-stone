@@ -60,7 +60,7 @@ export function PromptForm({
               <span className="sr-only">New Chat</span>
             </Link>
           </TooltipTrigger>
-          <TooltipContent>创建新的聊天</TooltipContent>
+          <TooltipContent>创建新的对话</TooltipContent>
         </Tooltip>
         <Textarea
           ref={inputRef}
@@ -69,7 +69,7 @@ export function PromptForm({
           rows={1}
           value={input}
           onChange={e => setInput(e.target.value)}
-          placeholder="发送一条消息."
+          placeholder="发送一条信息"
           spellCheck={false}
           className="min-h-[60px] w-full resize-none bg-transparent px-4 py-[1.3rem] focus-within:outline-none sm:text-sm"
         />
@@ -85,7 +85,7 @@ export function PromptForm({
                 <span className="sr-only">Send message</span>
               </Button>
             </TooltipTrigger>
-            <TooltipContent>发送消息</TooltipContent>
+            <TooltipContent>发送信息</TooltipContent>
           </Tooltip>
         </div>
       </div>

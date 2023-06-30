@@ -42,7 +42,7 @@ export function ChatPanel({
               className="bg-background"
             >
               <IconStop className="mr-2" />
-              停止回答
+              停止生成回复
             </Button>
           ) : (
             messages?.length > 0 && (
@@ -52,7 +52,7 @@ export function ChatPanel({
                 className="bg-background"
               >
                 <IconRefresh className="mr-2" />
-                重新生成回答
+                重新生成回复
               </Button>
             )
           )}
@@ -70,7 +70,7 @@ export function ChatPanel({
             setInput={setInput}
             isLoading={isLoading}
           />
-          <FooterText className="hidden sm:block" />
+          <FooterText />
         </div>
       </div>
     </div>
