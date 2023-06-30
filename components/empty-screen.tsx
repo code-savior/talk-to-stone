@@ -6,16 +6,16 @@ import { IconArrowRight } from '@/components/ui/icons'
 
 const exampleMessages = [
   {
-    heading: 'Explain technical concepts',
-    message: `What is a "serverless function"?`
+    heading: '解释技术概念',
+    message: `什么是 "serverless function"？`
   },
   {
-    heading: 'Summarize an article',
-    message: 'Summarize the following article for a 2nd grader: \n'
+    heading: '总结一篇文章',
+    message: '将以下文章简化给一个二年级的孩子： \n'
   },
   {
-    heading: 'Draft an email',
-    message: `Draft an email to my boss about the following: \n`
+    heading: '起草一封电子邮件',
+    message: `起草一封关于以下内容的电子邮件给我的老板： \n`
   }
 ]
 
@@ -24,11 +24,11 @@ export function EmptyScreen({ setInput }: Pick<UseChatHelpers, 'setInput'>) {
     <div className="mx-auto max-w-2xl px-4">
       <div className="rounded-lg border bg-background p-8">
         <h1 className="mb-2 text-lg font-semibold">
-          Welcome to 
+          欢迎来到 
           <span className='bg-gradient-to-r from-red-500 to-blue-500 bg-clip-text text-transparent'> Talk To Stone</span>
         </h1>
         <p className="leading-normal text-muted-foreground">
-          You can start a conversation here or try the following examples:
+          你可以在这里开始对话，或尝试以下示例：
         </p>
         <div className="mt-4 flex flex-col items-start space-y-2">
           {exampleMessages.map((message, index) => (
