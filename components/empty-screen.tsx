@@ -2,7 +2,9 @@ import { UseChatHelpers } from 'ai/react'
 
 import { Button } from '@/components/ui/button'
 import { ExternalLink } from '@/components/external-link'
-import { IconArrowRight } from '@/components/ui/icons'
+import { IconArrowRight, IconCoffee } from '@/components/ui/icons'
+
+import Image from 'next/image'
 
 const exampleMessages = [
   {
@@ -42,6 +44,13 @@ export function EmptyScreen({ setInput }: Pick<UseChatHelpers, 'setInput'>) {
               {message.heading}
             </Button>
           ))}
+        </div>
+        <div className="mt-6 flex flex-col sm:hidden">
+          <p className="flex items-center">
+            <IconCoffee className="mr-2 h-5 w-5 text-muted-foreground" />
+            <span className='text-sm leading-normal text-muted-foreground'>Buy me a coffee</span>
+          </p>
+          <Image width={100} height={100} src='/qrcode.jpg' alt='' />
         </div>
       </div>
     </div>
