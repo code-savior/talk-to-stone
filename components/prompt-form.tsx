@@ -13,6 +13,8 @@ import {
 } from '@/components/ui/tooltip'
 import { IconArrowElbow, IconPlus } from '@/components/ui/icons'
 
+import { useMediaQuery } from 'usehooks-ts'
+
 export interface PromptProps
   extends Pick<UseChatHelpers, 'input' | 'setInput'> {
   onSubmit: (value: string) => Promise<void>
@@ -25,6 +27,8 @@ export function PromptForm({
   setInput,
   isLoading
 }: PromptProps) {
+  const matches = useMediaQuery('(min-width: 768px)')
+
   const { formRef, onKeyDown } = useEnterSubmit()
   const inputRef = React.useRef<HTMLTextAreaElement>(null)
 
@@ -65,7 +69,7 @@ export function PromptForm({
         <Textarea
           ref={inputRef}
           tabIndex={0}
-          onKeyDown={onKeyDown}
+          onKeyDown={matches ? onKeyDown : ()=>{}}
           rows={1}
           value={input}
           onChange={e => setInput(e.target.value)}
